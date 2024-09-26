@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de búsqueda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #8e44ad;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex-grow: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-right: none;
+            border-radius: 2px 0 0 2px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 0 2px 2px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar button .lupa {
+            margin-right: 5px;
+            font-size: 18px;
+        }
+        .results {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .result {
+            margin-bottom: 20px;
+        }
+        .result h2 {
+            color: #1a0dab;
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+        .result .url {
+            color: #006621;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .result .description {
+            color: #545454;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Titulo <span style="background-color: #9b59b6; padding: 2px 5px; font-size: 14px; vertical-align: middle;">Design System</span></h1>
+        <a href="#">Document Link</a>
+    </header>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+                <span style="margin-left: 5px;">Search</span>
+            </button>
+        </div>
+    </div>
+    <div class="results">
+        <div class="result">
+            <h2>Resultado de búsqueda 1</h2>
+            <div class="url">www.ejemplo1.com</div>
+            <div class="description">Descripcion breve del resultado</div>
+        </div>
+        <div class="result">
+            <h2>Resultado de búsqueda 2</h2>
+            <div class="url">www.ejemplo2.com</div>
+            <div class="description">Descripcion breve del resultado</div>
+        </div>
+        <div class="result">
+            <h2>Resultado de búsqueda 3</h2>
+            <div class="url">www.ejemplo3.com</div>
+            <div class="description">Descripcion breve del resultado</div>
+        </div>
+        <div class="result">
+            <h2>Resultado de búsqueda 4</h2>
+            <div class="url">www.ejemplo4.com</div>
+            <div class="description">Descripción breve del resultado</div>
+        </div>
+    </div>
+</body>
+</html>
