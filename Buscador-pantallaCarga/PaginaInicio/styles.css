@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+.logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+}
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+}
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.search-bar button .lupa {
+    margin-right: 5px;
+    font-size: 18px;
+}
+footer {
+    text-align: center;
+    margin-top: 500px;
+    padding: 10px;
+    background-color: #f1eaeaf8;
+}
+footer a {
+    color: #007bff;
+    text-decoration:none;
+}
+
+.navBar {
+    background-color: #7952B3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .navBarTitle {
+      font-size: x-large;
+      color: white !important;
+      font-weight: bold;
+  }
+  .navBarLink {
+      color: white !important;
+      font-weight: bold;
+      align-items: center;
+  }

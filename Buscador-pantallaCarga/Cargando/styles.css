@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+}
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.search-bar button .lupa {
+    margin-right: 5px;
+    font-size: 18px;
+}
+.results {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.result {
+    margin-bottom: 20px;
+}
+.result h2 {
+    color: #1a0dab;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+.result .url {
+    color: #006621;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.result .description {
+    color: #545454;
+    font-size: 14px;
+}
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.navBar {
+  background-color: #7952B3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.navBarTitle {
+    font-size: x-large;
+    color: white !important;
+    font-weight: bold;
+}
+.navBarLink {
+    color: white !important;
+    font-weight: bold;
+    align-items: center;
+}
