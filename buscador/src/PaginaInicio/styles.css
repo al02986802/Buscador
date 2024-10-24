@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -120px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 25%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.searchSpan {
+    margin-left: 5px
+}
+
+.search-container {
+    margin-top: 20px; /* Espacio entre el logo y la barra de búsqueda */
+}
+
+/* Estilo del formulario */
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchBar {
+    width: 500px;
+    padding: 15px;
+    border: 2px solid #007BFF;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.search-bar input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
