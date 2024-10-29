@@ -1,6 +1,25 @@
+import { useEffect, useState } from 'react';
 import '../Resultados/styles.css';
+import api from '../http.common';
 
 const Resultados = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await api.get('/postconsultas'); // replace '/endpoint' with the API endpoint
+            setData(response.data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+        fetchData();
+      }, []);
+    
+    useEffect(() => {
+      console.log(data);
+    }, [data]);
   return (
     <div>
         <div className="search-container">
