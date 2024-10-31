@@ -7,12 +7,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin-top: -120px;
 }
 
 section {
     margin-top: 20px;
+}
+
+.centerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
 }
 
 .logo {
