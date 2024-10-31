@@ -63,7 +63,7 @@ const Resultados = () => {
         <div className="results">
           {resultados && resultados.map((resultado, index) => (
             <div className="result" key={index}>
-                <a href="/resultados/cargando">
+                <a href={resultado.url}>
                 <h2>{resultado.title}</h2>
                 </a>
                 <div className="url">{`${resultado.url} > ${resultText}`}</div>
