@@ -27,16 +27,28 @@ const Resultados = () => {
     const navigate = useNavigate(); 
     const handleClick = () => {
         navigate(`/resultados?query=${encodeURIComponent(searchText)}`);
+        fetchData();
     };
+
+    const fetchData = async () => {
+      try {
+        const response = await api.get('/postresultados');
+        setResultados(shuffleResults(response.data));
+      } catch (error) {
+        console.error('Error consiguiendo los datos', error);
+      }
+    };
+
+    // Randomiza el orden de los resultados
+    const shuffleResults = (array: searchResult[]): searchResult[] => {
+      const shuffledArray = [...array];
+      for (let i = shuffledArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+      }
+      return shuffledArray;
+    }
     useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await api.get('/postresultados');
-            setResultados(response.data);
-          } catch (error) {
-            console.error('Error consiguiendo los datos', error);
-          }
-        };
         fetchData();
       }, []);
 
