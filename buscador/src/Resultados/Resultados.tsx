@@ -13,12 +13,13 @@ type searchResult = {
 };
 
 const Resultados = () => {
-    const [resultados, setResultados] = useState<searchResult[] | null>(null);
-    const [searchText, setSearchText] = useState('');
-
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const resultText = queryParams.get('query');
+
+    const [resultados, setResultados] = useState<searchResult[] | null>(null);
+    const [searchText, setSearchText] = useState(resultText || '');
+    const [errorMessage, setErrorMessage] = useState<string>('');
 
     const handleInputChange = (event : any) => {
         setSearchText(event.target.value);
@@ -32,10 +33,14 @@ const Resultados = () => {
 
     const fetchData = async () => {
       try {
-        const response = await api.get('/postresultados');
-        setResultados(shuffleResults(response.data));
+        const response = await api.get(`/searchquery?&description=${encodeURIComponent(searchText)}`);
+        console.log(response);
+        setResultados(shuffleResults(response.data.data));
+        setErrorMessage('');
       } catch (error) {
         console.error('Error consiguiendo los datos', error);
+        setErrorMessage('La consulta contiene palabras prohibidas.');
+        setResultados(null);
       }
     };
 
@@ -82,6 +87,16 @@ const Resultados = () => {
                 <div className="description">{resultado.description}</div>
             </div>
             ))}
+          {resultados && resultados.length === 0 && (
+            <div className="result">
+              <div className="description">No hay resultados para esta busqueda</div>
+            </div>
+          )}
+          {errorMessage && (
+            <div className="result">
+              <div className="error">{errorMessage}</div>
+            </div>
+          )}
         </div>
     </div>
   )
